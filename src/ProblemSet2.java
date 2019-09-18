@@ -43,7 +43,7 @@ public class ProblemSet2 {
          System.out.println("\nNAME     : " + firstName + " " + lastName);
          System.out.println("GRADE    : " + grade);
          System.out.println("AGE      : " + age);
-         System.out.println("HOMETOWN : " + hometown);
+         System.out.println("HOMETOWN : " + hometown + "\n");
 
         /*
          * Exercise 2.
@@ -52,6 +52,14 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
+         final double dollar = 1.00;
+         final double quarter = 0.25;
+         final double dime = 0.10;
+         final double nickel = 0.05;
+         final double penny = 0.01;
+         System.out.print("Enter a dollar amount: ");
+         double dollarAmount = in.nextDouble();
+         System.out.println(dollarAmount);
 
 
         /*
