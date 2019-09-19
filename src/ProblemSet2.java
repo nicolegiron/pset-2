@@ -28,7 +28,7 @@ public class ProblemSet2 {
          * name, grade, age, and hometown.
          */
 
-         System.out.print("Enter your first name: ");
+         /*System.out.print("Enter your first name: ");
          String firstName = in.nextLine();
          System.out.print("Enter your last name: ");
          String lastName = in.nextLine();
@@ -44,7 +44,7 @@ public class ProblemSet2 {
          System.out.println("GRADE    : " + grade);
          System.out.println("AGE      : " + age);
          System.out.println("HOMETOWN : " + hometown + "\n");
-
+*/
         /*
          * Exercise 2.
          *
@@ -52,15 +52,27 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
-         final double dollar = 1.00;
-         final double quarter = 0.25;
-         final double dime = 0.10;
-         final double nickel = 0.05;
-         final double penny = 0.01;
+         final double DOLLAR = 1.00;
+         final double QUARTER = .25;
+         final double DIME = .10;
+         final double NICKEL = .05;
+         final double PENNY = .01;
+
          System.out.print("Enter a dollar amount: ");
          double dollarAmount = in.nextDouble();
-         System.out.println(dollarAmount);
+         double dollarFinal = Math.floor(dollarAmount/DOLLAR);
+         dollarAmount = dollarAmount - (dollarFinal * DOLLAR);
+         double quarterAmount = Math.floor(dollarAmount/QUARTER);
+         dollarAmount = dollarAmount-(dollarFinal*DOLLAR);
+         double dimesAmount = Math.floor(dollarAmount/DIME);
+         dollarAmount = dollarAmount-(dollarFinal*DOLLAR);
 
+         System.out.printf("DOLLARS  : %.0f\n", dollarFinal);
+         System.out.printf("QUARTERS : %.0f\n", quarterAmount);
+         System.out.printf("DIMES    : %.0f\n", dimesAmount);
+         // System.out.println("DIMES    : " + dimeAmount);
+         // System.out.println("NICKLES  : " + nickelAmount);
+         // System.out.println("PENNIES  : " + pennyAmount);
 
         /*
          * Exercise 3.
