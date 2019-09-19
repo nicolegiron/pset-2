@@ -61,19 +61,22 @@ public class ProblemSet2 {
          System.out.print("Enter a dollar amount: ");
          double dollarAmount = in.nextDouble();
          double dollarFinal = Math.floor(dollarAmount/DOLLAR);
-         dollarAmount = dollarAmount - (dollarFinal * DOLLAR);
+         dollarAmount = dollarAmount % DOLLAR;
          double quarterAmount = Math.floor(dollarAmount/QUARTER);
-         dollarAmount = dollarAmount-(dollarFinal*DOLLAR);
-         double dimesAmount = Math.floor(dollarAmount/DIME);
-         dollarAmount = dollarAmount-(dollarFinal*DOLLAR);
+         dollarAmount = dollarAmount % QUARTER;
+         double dimeAmount = Math.floor(dollarAmount/DIME);
+         dollarAmount = dollarAmount % DIME;
+         double nickelAmount = Math.floor(dollarAmount/NICKEL);
+         dollarAmount = dollarAmount % NICKEL;
+         double pennyAmount = Math.floor(dollarAmount/PENNY);
+         dollarAmount = dollarAmount % PENNY;
 
          System.out.printf("DOLLARS  : %.0f\n", dollarFinal);
          System.out.printf("QUARTERS : %.0f\n", quarterAmount);
-         System.out.printf("DIMES    : %.0f\n", dimesAmount);
-         // System.out.println("DIMES    : " + dimeAmount);
-         // System.out.println("NICKLES  : " + nickelAmount);
-         // System.out.println("PENNIES  : " + pennyAmount);
-
+         System.out.printf("DIMES    : %.0f\n", dimeAmount);
+         System.out.printf("NICKELS  : %.0f\n", nickelAmount);
+         System.out.printf("PENNIES  : %.0f\n", pennyAmount);
+         
         /*
          * Exercise 3.
          *
