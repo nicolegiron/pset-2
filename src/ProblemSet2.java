@@ -52,15 +52,16 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
-         final double DOLLAR = 1.00;
-         final double QUARTER = .25;
-         final double DIME = .10;
-         final double NICKEL = .05;
-         final double PENNY = .01;
+         final double DOLLAR = 100;
+         final double QUARTER = 25;
+         final double DIME = 10;
+         final double NICKEL = 05;
+         final double PENNY = 1;
 
          System.out.print("Enter a dollar amount: ");
          double dollarAmount = in.nextDouble();
          System.out.println("");
+         dollarAmount = dollarAmount*100;
          double dollarFinal = Math.floor(dollarAmount/DOLLAR); /*Finds the amount of dollars needed by diving the
            dollarAmount by the amount of a dollar(the constant)*/
          dollarAmount = dollarAmount % DOLLAR; /*This is needed so the next coin amount can be calculated by the
@@ -87,12 +88,13 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
-         final double TEN = 10.00;
-         final double FIVE = 5.00;
+         final double TEN = 1000;
+         final double FIVE = 500;
 
          System.out.print("\nEnter a dollar amount: ");
          double dollarAmount2 = in.nextDouble();
          System.out.println("");
+         dollarAmount2 = dollarAmount2 * 100;
 
          double tenAmount = Math.floor(dollarAmount2/TEN);
          dollarAmount2 = dollarAmount2%TEN;
